@@ -11,7 +11,7 @@ class Cronic < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/hzerrad/cronic/releases/download/v0.1.0/cronic_darwin_amd64.tar.gz"
-      sha256 "109b235bb75a3f7bb64acbba78626c2140cb042956465f0c10fc617552dff3de"
+      sha256 "63e14410e17ba16f00582537f91c526a022ac41c84b6ad00e83a968c51666e6f"
 
       def install
         bin.install "cronic"
@@ -19,7 +19,7 @@ class Cronic < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/hzerrad/cronic/releases/download/v0.1.0/cronic_darwin_arm64.tar.gz"
-      sha256 "399633727502d5a12c2e002931ced2e2103862e1e57f984cfc004eab28b99c0c"
+      sha256 "bcea09acc502a6b5503cddac6498da3c897ee703a02d797d1701a479841c50e6"
 
       def install
         bin.install "cronic"
@@ -30,14 +30,14 @@ class Cronic < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/hzerrad/cronic/releases/download/v0.1.0/cronic_linux_amd64.tar.gz"
-      sha256 "4fbec0bc351e3f5e4abfb2449687d40e97c93bc4e2a9feb943f4c01bdd4dd71f"
+      sha256 "0e67f792dab0232a40f724e882b221764928ad0cb6a0604b747d03703d094476"
       def install
         bin.install "cronic"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/hzerrad/cronic/releases/download/v0.1.0/cronic_linux_arm64.tar.gz"
-      sha256 "e503f085af3799788efa28f23628d92a2f0e2740154b56cb885d94890f7648fd"
+      sha256 "6299d1bc8e53c800fbf668c8e4c5a74dc42aae56885eb71e53ccf1e5a1170eef"
       def install
         bin.install "cronic"
       end
