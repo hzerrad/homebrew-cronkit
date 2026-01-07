@@ -11,7 +11,7 @@ class Cronkit < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/hzerrad/cronkit/releases/download/v0.1.0/cronkit_darwin_amd64.tar.gz"
-      sha256 "55eec9489ca3c72937bd8f4951466891d7ccdb591d1d581af26653ec48150c56"
+      sha256 "63dcb660ea0be61f87e88149359b4b856d41edfd9f4bccc9e04a6ecd021b00f8"
 
       def install
         bin.install "cronkit"
@@ -19,7 +19,7 @@ class Cronkit < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/hzerrad/cronkit/releases/download/v0.1.0/cronkit_darwin_arm64.tar.gz"
-      sha256 "6a8cc774023edfcd8f1ed34b064804eb749d6cc77612367ce08b03e3d3f46697"
+      sha256 "bdc62b216f3dbdb7773460aad4e113cc228da4da421cc76cd3bdcbfdf696f4dc"
 
       def install
         bin.install "cronkit"
@@ -30,14 +30,14 @@ class Cronkit < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/hzerrad/cronkit/releases/download/v0.1.0/cronkit_linux_amd64.tar.gz"
-      sha256 "5838de3b03b6026b5c7d5109d903a07be690c0b9813ee6631575f937293d49a8"
+      sha256 "ab748cad99914b98b4095bae0204a2e2637427009f05b21fe3a37b36e3f0a1fe"
       def install
         bin.install "cronkit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/hzerrad/cronkit/releases/download/v0.1.0/cronkit_linux_arm64.tar.gz"
-      sha256 "860c828d4578809102ddab3f0a35de2d82c1deccb2c9481c1e0cdff2b8620d82"
+      sha256 "7319d4bd94ac0369867c8df21bb0023d9407ddefc34ac72d8b8c6f323f832a2f"
       def install
         bin.install "cronkit"
       end
