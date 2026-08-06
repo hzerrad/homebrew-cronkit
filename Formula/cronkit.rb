@@ -5,23 +5,23 @@
 class Cronkit < Formula
   desc "Make cron human again - CLI tool for cron job management"
   homepage "https://github.com/hzerrad/cronkit"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hzerrad/cronkit/releases/download/v0.1.0/cronkit_darwin_amd64.tar.gz"
-      sha256 "904213fb26bb80066171fcbf61ba9a1fcc66f207354ec402e74dcacb95f8db7a"
+      url "https://github.com/hzerrad/cronkit/releases/download/v0.1.1/cronkit_darwin_amd64.tar.gz"
+      sha256 "e2130ade883a5f3be2e4403a1a0cbb82f72151b282fd5a49f5dcd963bae00d5f"
 
-      def install
+      define_method(:install) do
         bin.install "cronkit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hzerrad/cronkit/releases/download/v0.1.0/cronkit_darwin_arm64.tar.gz"
-      sha256 "c4259ca1d5bb8e0462b77f7c74d49ebb21710e442b6fd911a29fd9c8523b731d"
+      url "https://github.com/hzerrad/cronkit/releases/download/v0.1.1/cronkit_darwin_arm64.tar.gz"
+      sha256 "00835a7d0e310b862b94848345c6accb5da9712d622e706bc1396627a52e6c7b"
 
-      def install
+      define_method(:install) do
         bin.install "cronkit"
       end
     end
@@ -29,16 +29,16 @@ class Cronkit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hzerrad/cronkit/releases/download/v0.1.0/cronkit_linux_amd64.tar.gz"
-      sha256 "2eb8dec964efd56bdbef8d10e716253d2f78be115220b5e3ad6075bab5c74d13"
-      def install
+      url "https://github.com/hzerrad/cronkit/releases/download/v0.1.1/cronkit_linux_amd64.tar.gz"
+      sha256 "d8592d72551aabd932c0e0272007c6396210be2d296afb14d72bdddf7ab9321e"
+      define_method(:install) do
         bin.install "cronkit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hzerrad/cronkit/releases/download/v0.1.0/cronkit_linux_arm64.tar.gz"
-      sha256 "97b91158d33a5f4c5caa89ca15ff3417999769702d324e8bb4cd6bee7cf8c600"
-      def install
+      url "https://github.com/hzerrad/cronkit/releases/download/v0.1.1/cronkit_linux_arm64.tar.gz"
+      sha256 "0e64c9334c70c6c52071cc2319683fd0390f3d9ff9973204493bb077e3ee449b"
+      define_method(:install) do
         bin.install "cronkit"
       end
     end
